@@ -1,0 +1,19 @@
+Description: Rivendell Debian 11 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-16
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/rdadmin/rdadmin.cpp
+===================================================================
+--- rivendell.orig/rdadmin/rdadmin.cpp
++++ rivendell/rdadmin/rdadmin.cpp
+@@ -60,7 +60,7 @@ void PrintError(const QString &str,bool
+     QMessageBox::warning(NULL,QObject::tr("RDAdmin Error"),str);
+   }
+   else {
+-    fprintf(stderr,(QString("rdadmin: ")+str).toUtf8().constData());
++    fprintf(stderr,"%s",(QString("rdadmin: ")+str).toUtf8().constData());
+   }
+ }
+ 

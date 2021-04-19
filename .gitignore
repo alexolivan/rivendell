@@ -180,3 +180,16 @@ xdg/rdalsaconfig-root-consolehelper
 xdg/rddbconfig-root-consolehelper
 xdg/rivendell-opsguide-html.desktop
 xdg/rivendell-opsguide-pdf.desktop
+
+
+.pc/
+
+# Ignore files generated during build
+debian/files
+debian/*.after
+debian/*.before
+debian/*.substvars
+debian/*.log
+debian/*.debhelper
+debian/*-stamp
+debian/*/

@@ -1,0 +1,16 @@
+Source: rivendell
+Section: unknown
+Priority: optional
+Maintainer: Alejandro Olivan Alvarez <alejandro.olivan.alvarez@gmail.com>
+Build-Depends: debhelper-compat (= 13), autotools-dev
+Standards-Version: 4.5.1
+Homepage: http://www.rivendellaudio.org/
+Vcs-Browser: https://github.com/ElvishArtisan/rivendell
+Vcs-Git: https://github.com/ElvishArtisan/rivendell.git
+Rules-Requires-Root: no
+
+Package: rivendell
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, apache2
+Description: Rivendell Radio Automation System  
+ Rivendell is a complete radio broadcast automation solution, with facilities for the acquisition, management, scheduling and playout of audio content.
