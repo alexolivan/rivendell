@@ -1,0 +1,49 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: rivendell
+Upstream-Contact: fredg@paravelsystems.com
+Source: https://github.com/ElvishArtisan/rivendell
+
+Files: *
+Copyright: 2021 Fred Gleason <fredg@paravelsystems.com>
+           2021 Todd Baker <bakert@rfa.org>
+           2021 Luigino Bracci <lbracci@gmail.com>
+           2021 Josh Edelstein <edelsteinj@rfa.org>
+           2021 Pavel Fric <pavelfric@seznam.cz>
+           2021 Stefan Gabriel <stg@st-gabriel.de>
+           2021 Federico Grau <grauf@rfa.org>
+           2021 Patrick Linstruth <patrick@deltecent.com>
+           2021 Dan Mills <dmills@spamblock.demon.co.uk>
+           2021 Eivind Ødegård <gingermig@yahoo.no>
+           2021 Michael Papsdorf <info@emitworks.com>
+           2021 Alban Peignier <alban.peignier@free.fr>
+           2021 Daniel Roviriego <danifernando@gmail.com>
+           2021 Chris Smowton
+           2021 Scott Spillers <scotts@paravelsystems.com>
+           2021 David Klann <dklann@broadcasttool.com>
+License: GPL-2.0+
+
+Files: debian/*
+Copyright: 2021 Alejandro Olivan Alvarez <alejandro.olivan.alvarez@gmail.com>
+License: GPL-2.0+
+
+License: GPL-2.0+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.
+# Please avoid picking licenses with terms that are more restrictive than the
+# packaged work, as it may make Debian's contributions unacceptable upstream.
