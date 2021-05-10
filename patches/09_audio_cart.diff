@@ -1,0 +1,21 @@
+Description: Rivendell Debian 10 temporary fix rdlibrary when opening external editor
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/rdlibrary/audio_cart.cpp
+===================================================================
+--- rivendell.orig/rdlibrary/audio_cart.cpp
++++ rivendell/rdlibrary/audio_cart.cpp
+@@ -448,8 +448,8 @@ void AudioCart::extEditorCutData()
+   //            ex: %f = cart_cut filename
+   //        and possibly also add some tooltips with help advice
+ 
+-  if(fork()==0) {
+-    system(cmd+" &");
++  if(vfork()==0) {
++    system("(setsid "+cmd+" >/dev/null 2>&1 &)");
+     exit(0);
+   }
+ }

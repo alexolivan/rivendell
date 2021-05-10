@@ -1,3 +1,10 @@
+rivendell (3.5.05102021) stable; urgency=medium
+
+  * Maintainer upload.
+  * Patched issue on RDLibrary that prevents correct usage of external editor. 
+
+ -- Alejandro Olivan Alvarez <alejandro.olivan.alvarez@gmail.com>  Mon, 10 May 2021 11:41:59 +0200
+
 rivendell (3.5.04212021) stable; urgency=medium
 
   * Initial Release.
