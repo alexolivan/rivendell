@@ -1,0 +1,19 @@
+Description: Rivendell Debian 10 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/utils/rdalsaconfig/rdalsamodel.cpp
+===================================================================
+--- rivendell.orig/utils/rdalsaconfig/rdalsamodel.cpp
++++ rivendell/utils/rdalsaconfig/rdalsamodel.cpp
+@@ -277,7 +277,7 @@ bool RDAlsaModel::saveConfig(const QStri
+     return false;
+   }
+   for(int i=0;i<model_other_lines.size();i++) {
+-    fprintf(f,model_other_lines.at(i));
++    fprintf(f,"%s",model_other_lines.at(i));
+   }
+   fprintf(f,"%s\n",START_MARKER);
+   for(int i=0;i<model_alsa_cards.size();i++) {

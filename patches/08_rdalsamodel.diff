@@ -1,0 +1,34 @@
+Description: Rivendell Debian 10 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/utils/rdalsaconfig/rdalsaconfig.cpp
+===================================================================
+--- rivendell.orig/utils/rdalsaconfig/rdalsaconfig.cpp
++++ rivendell/utils/rdalsaconfig/rdalsaconfig.cpp
+@@ -44,7 +44,10 @@ void StopDaemons()
+ {
+   if(alsa_manage_daemons) {
+     if(system("systemctl --quiet is-active rivendell")==0) {
+-      system("systemctl --quiet stop rivendell");
++      int sysRetCode = system("systemctl --quiet stop rivendell");
++      if( sysRetCode == -1) {
++        fprintf(stderr,"rivendell failed to stop?");
++      }
+       alsa_daemon_start_needed=true;
+     }
+   }
+@@ -54,7 +57,10 @@ void StopDaemons()
+ void StartDaemons()
+ {
+   if(alsa_daemon_start_needed) {
+-    system("systemctl --quiet start rivendell");
++    int sysRetCode = system("systemctl --quiet start rivendell");
++    if( sysRetCode == -1) {
++      fprintf(stderr,"rivendell failed to start?");
++    }
+   }
+ }
+ 

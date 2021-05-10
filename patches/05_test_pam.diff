@@ -1,0 +1,21 @@
+Description: Rivendell Debian 10 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/tests/test_pam.cpp
+===================================================================
+--- rivendell.orig/tests/test_pam.cpp
++++ rivendell/tests/test_pam.cpp
+@@ -53,7 +53,9 @@ int ConversationResponseCallback(int num
+     case PAM_PROMPT_ECHO_ON:
+       printf("%s ",msg[i]->msg);
+       fflush(NULL);
+-      fgets(resp[i]->resp,256,stdin);
++      if (!fgets(resp[i]->resp,256,stdin)) {
++        continue;
++      }
+       resp[i]->resp[strlen(resp[i]->resp)-1]=0;
+       resp[i]->resp_retcode=0;
+       break;

@@ -1,0 +1,28 @@
+Description: Rivendell Debian 10 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/utils/rddbmgr/updateschema.cpp
+===================================================================
+--- rivendell.orig/utils/rddbmgr/updateschema.cpp
++++ rivendell/utils/rddbmgr/updateschema.cpp
+@@ -9794,12 +9794,12 @@ bool MainObject::UpdateSchema(int cur_sc
+     }
+ 
+     sql=QString("create table if not exists NEXUS_STATIONS (")+
+-      "STATION varchar(255) not null,"+
+-      "CATEGORY varchar(10) not null,"+
++      "STATION varchar(255) not null default '',"+
++      "CATEGORY varchar(10) not null default '',"+
+       "AUTO_MERGE enum('N','Y') default 'N',"+
+-      "RD_SERVICE varchar(10) not null,"+
+-      "RD_GROUP_NAME varchar(10) not null,"+
+-      "RD_SCHED_CODE varchar(11) not null)"+
++      "RD_SERVICE varchar(10) not null default '',"+
++      "RD_GROUP_NAME varchar(10) not null default '',"+
++      "RD_SCHED_CODE varchar(11) not null default '')"+
+       " charset utf8mb4 collate utf8mb4_general_ci"+
+       db_table_create_postfix;
+     if(!RDSqlQuery::apply(sql,err_msg)) {

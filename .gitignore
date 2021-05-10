@@ -15,6 +15,7 @@
 *.rpm
 *.so
 *.xsl
+.pc
 rivendell-*.tar.gz
 rivendell-*.zip
 .AppleDouble

@@ -1,0 +1,19 @@
+Description: Rivendell Debian 10 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/tests/log_unlink_test.cpp
+===================================================================
+--- rivendell.orig/tests/log_unlink_test.cpp
++++ rivendell/tests/log_unlink_test.cpp
+@@ -90,7 +90,7 @@ MainObject::MainObject(QObject *parent)
+   //
+   QString err (tr("upload_test: "));
+   if(!RDOpenDb(&schema,&err,test_config)) {
+-    fprintf(stderr,err.ascii());
++    fprintf(stderr,"%s",err.ascii());
+     delete cmd;
+     exit(256);
+   }

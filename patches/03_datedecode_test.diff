@@ -1,0 +1,19 @@
+Description: Rivendell Debian 10 debuild warn-error solve
+Author: Alejandro Olivan Alvarez
+Origin:other
+Last-Update: 2021-04-21
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: rivendell/tests/datedecode_test.cpp
+===================================================================
+--- rivendell.orig/tests/datedecode_test.cpp
++++ rivendell/tests/datedecode_test.cpp
+@@ -85,7 +85,7 @@ MainObject::MainObject(QObject *parent)
+   //
+   QString err (tr("datedecode_test: "));
+   if(!RDOpenDb(&schema,&err,config)) {
+-    fprintf(stderr,err.ascii());
++    fprintf(stderr,"%s",err.ascii());
+     delete cmd;
+     exit(256);
+   }
