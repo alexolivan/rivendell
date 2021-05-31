@@ -1,3 +1,10 @@
+rivendell (3.6.031052021) stable; urgency=medium
+
+  * Maintainer upload.
+  * Added several bugfixes.
+
+ -- Alejandro Olivan Alvarez <alejandro.olivan.alvarez@gmail.com>  Mon, 31 May 2021 11:55:16 +0200
+
 rivendell (3.6.017052021) stable; urgency=medium
 
   * Maintainer upload.
