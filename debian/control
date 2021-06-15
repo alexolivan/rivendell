@@ -10,8 +10,8 @@ Vcs-Git: https://github.com/ElvishArtisan/rivendell.git
 
 Package: rivendell
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}, apache2, expat, libid3-tools, libcurl4, libcoverart1, libdiscid0, libmusicbrainz5-2, libcdparanoia0, libsndfile1, default-mysql-client, libpam-modules, libvorbis0a, libvorbisenc2, libvorbisfile3, python3.7, python3-pymysql, python3-serial, python3-requests, libmp3lame0, libsoundtouch1, libtag1v5, xorg, flac, faad, lame, libmad0, twolame
-Recommends: libasound2, jackd2
-Suggests: asihpi-dkms-4, snd-asihpi-dkms-4, default-mysql-server
+Depends: ${shlibs:Depends}, ${misc:Depends}, apache2, expat, libid3-tools, libcurl4, libcoverart1, libdiscid0, libmusicbrainz5-2, libcdparanoia0, libsndfile1, default-mysql-client, libpam-modules, libvorbis0a, libvorbisenc2, libvorbisfile3, python3.7, python3-pymysql, python3-serial, python3-requests, libmp3lame0, libsoundtouch1, libtag1v5, xorg, flac, faad, lame, libmad0, twolame, default-mysql-server, autofs, nfs-kernel-server, alsa-utils, libasound2, jackd2
+Recommends: 
+Suggests: snd-asihpi-dkms-4, python-audioscience
 Description: Rivendell Radio Automation System  
  Rivendell is a complete radio broadcast automation solution, with facilities for the acquisition, management, scheduling and playout of audio content.
